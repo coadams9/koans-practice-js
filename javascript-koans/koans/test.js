@@ -1,7 +1,5 @@
-var arr10 = new Array(10)
+var array = ["zero", "one", "two", "three", "four", "five"];
 
-console.log(arr10)
+var copyOfArray = array.slice();
 
-arr10.length = 5
-
-console.log(arr10)
+console.log(copyOfArray)
