@@ -1,12 +1,12 @@
-// function makeMysteryFunction(makerValue) {
-//     var newFunction = function doMysteriousThing(param) {
-//         return makerValue + param;
-//     };
-//     return newFunction;
-// }
+function makeMysteryFunction(makerValue) {
+    var newFunction = function doMysteriousThing(param) {
+        return makerValue + param;
+    };
+    return newFunction;
+}
 
-// var mysteryFunction3 = makeMysteryFunction(3);
-// var mysteryFunction5 = makeMysteryFunction(5);
+var mysteryFunction3 = makeMysteryFunction(3);
+var mysteryFunction5 = makeMysteryFunction(5);
 
 // console.log(mysteryFunction3(10) + mysteryFunction5(5))
 
@@ -22,4 +22,24 @@ function returnAllArgs() {
     return argsArray.join(', ');
 }
 
-console.log(typeof returnAllArgs("first", "second", "third"))
+// console.log(typeof returnAllArgs("first", "second", "third"))
+
+// ----------------------------------------------------------
+
+var megalomaniac = {
+    mastermind: "Brain",
+    henchman: "Pinky",
+    battleCry: function (noOfBrains) {
+        return "They are " + this.henchman + " and the" +
+            Array(noOfBrains + 1).join(" " + this.mastermind);
+    }
+};
+
+var battleCry = megalomaniac.battleCry(4);
+// console.log(battleCry)
+// let x = Array(4 + 1)
+// console.log(x)
+
+let test = Array(4).fill('x')
+let x = test.join(' ' + 'blah')
+console.log(x)

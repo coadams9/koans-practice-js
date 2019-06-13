@@ -4,23 +4,23 @@ describe("About Objects", function () {
     var megalomaniac;
 
     beforeEach(function () {
-       megalomaniac = {  mastermind: "Joker", henchwoman: "Harley" };
+      megalomaniac = { mastermind: "Joker", henchwoman: "Harley" };
     });
 
     it("should confirm objects are collections of properties", function () {
-      expect(megalomaniac.mastermind).toBe(FILL_ME_IN);
+      expect(megalomaniac.mastermind).toBe('Joker');
     });
 
     it("should confirm that properties are case sensitive", function () {
-      expect(megalomaniac.henchwoman).toBe(FILL_ME_IN);
-      expect(megalomaniac.henchWoman).toBe(FILL_ME_IN);
+      expect(megalomaniac.henchwoman).toBe('Harley');
+      expect(megalomaniac.henchWoman).toBe(undefined);
     });
   });
 
 
   it("should know properties that are functions act like methods", function () {
     var megalomaniac = {
-      mastermind : "Brain",
+      mastermind: "Brain",
       henchman: "Pinky",
       battleCry: function (noOfBrains) {
         return "They are " + this.henchman + " and the" +
@@ -29,7 +29,7 @@ describe("About Objects", function () {
     };
 
     var battleCry = megalomaniac.battleCry(4);
-    expect(FILL_ME_IN).toMatch(battleCry);
+    expect('They are Pinky and the Brain Brain Brain Brain').toMatch(battleCry);
   });
 
   it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
@@ -74,7 +74,7 @@ describe("About Objects", function () {
   });
 
   it("should know that properties can be added and deleted", function () {
-    var megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
+    var megalomaniac = { mastermind: "Agent Smith", henchman: "Agent Smith" };
 
     expect("secretary" in megalomaniac).toBe(FILL_ME_IN);
 
@@ -87,23 +87,22 @@ describe("About Objects", function () {
 
 
   it("should use prototype to add to all objects", function () {
-      function Circle(radius)
-      {
-        this.radius = radius;
-      }
+    function Circle(radius) {
+      this.radius = radius;
+    }
 
-      var simpleCircle = new Circle(10);
-      var colouredCircle = new Circle(5);
-      colouredCircle.colour = "red";
+    var simpleCircle = new Circle(10);
+    var colouredCircle = new Circle(5);
+    colouredCircle.colour = "red";
 
-      expect(simpleCircle.colour).toBe(FILL_ME_IN);
-      expect(colouredCircle.colour).toBe(FILL_ME_IN);
+    expect(simpleCircle.colour).toBe(FILL_ME_IN);
+    expect(colouredCircle.colour).toBe(FILL_ME_IN);
 
-      Circle.prototype.describe = function () {
-        return "This circle has a radius of: " + this.radius;
-      };
+    Circle.prototype.describe = function () {
+      return "This circle has a radius of: " + this.radius;
+    };
 
-      expect(simpleCircle.describe()).toBe(FILL_ME_IN);
-      expect(colouredCircle.describe()).toBe(FILL_ME_IN);
+    expect(simpleCircle.describe()).toBe(FILL_ME_IN);
+    expect(colouredCircle.describe()).toBe(FILL_ME_IN);
   });
 });
