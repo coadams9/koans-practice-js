@@ -42,4 +42,25 @@ var battleCry = megalomaniac.battleCry(4);
 
 let test = Array(4).fill('x')
 let x = test.join(' ' + 'blah')
-console.log(x)
+// console.log(x)
+
+// ----------------------------------------------------------
+
+var currentDate = new Date();
+var currentYear = (currentDate.getFullYear());
+// console.log(currentYear)
+// console.log(currentDate)
+// console.log(2019 - 1970)
+
+// ----------------------------------------------------------
+
+function Circle(radius) {
+    this.radius = radius;
+    console.log(this)
+}
+
+Circle(10)
+// console.log(radius)
+// console.log(Circle.radius)
+
+// ----------------------------------------------------------
