@@ -1,3 +1,6 @@
+// Going through these functions I stopped along the way and entered them into a debugger to get a better idea of the ones that required it for me! This is where i setup and ran my tests
+// Each new section and or problem is seperated by '-------------------'
+
 function makeMysteryFunction(makerValue) {
     var newFunction = function doMysteriousThing(param) {
         return makerValue + param;
@@ -87,6 +90,16 @@ aPerson.getFullName = function () {
 };
 
 // console.log(aPerson.firstname)
+
+// ----------------------------------------------------------
+
+var onlyEven = [2, 4, 6];
+var mixedBag = [2, 4, 5, 6];
+
+var isEven = function (x) { return x % 2 === 0 };
+
+// console.log(onlyEven.every(isEven))
+// console.log(mixedBag.every(isEven))
 
 // ----------------------------------------------------------
 
