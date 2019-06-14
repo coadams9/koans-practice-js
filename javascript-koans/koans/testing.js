@@ -56,7 +56,7 @@ var currentYear = (currentDate.getFullYear());
 
 function Circle(radius) {
     this.radius = radius;
-    console.log(this)
+    // console.log(this)
 }
 
 Circle(10)
@@ -64,3 +64,29 @@ Circle(10)
 // console.log(Circle.radius)
 
 // ----------------------------------------------------------
+
+function Person(firstname, lastname) {
+    var fullName = firstname + " " + lastname;
+
+    this.getFirstName = function () { return firstname; };
+    this.getLastName = function () { return lastname; };
+    this.getFullName = function () { return fullName; };
+}
+var aPerson = new Person("John", "Smith");
+
+aPerson.firstname = "Penny";
+aPerson.lastname = "Andrews";
+aPerson.fullName = "Penny Andrews";
+
+// expect(aPerson.getFirstName()).toBe('John');
+// expect(aPerson.getLastName()).toBe('Smith');
+// expect(aPerson.getFullName()).toBe('John Smith');
+
+aPerson.getFullName = function () {
+    return aPerson.lastname + ", " + aPerson.firstname;
+};
+
+// console.log(aPerson.firstname)
+
+// ----------------------------------------------------------
+
