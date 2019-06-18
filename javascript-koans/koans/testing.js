@@ -116,8 +116,11 @@ let filteredEven = original.filter(num => num % 2 === 0)
 let reduced = original.reduce((a, b) => a + b)
 let mappedPlusTwo = original.map(num => num + 2)
 
-console.log(original)
-console.log('filtered:', filteredEven)
-console.log('reduced:', reduced)
-console.log('mapped:', mappedPlusTwo)
-console.log(original)
+// console.log(original)
+// console.log('filtered:', filteredEven)
+// console.log('reduced:', reduced)
+// console.log('mapped:', mappedPlusTwo)
+// console.log(original)
+
+// ----------------------------------------------------------
+
