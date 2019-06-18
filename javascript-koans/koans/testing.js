@@ -96,10 +96,28 @@ aPerson.getFullName = function () {
 var onlyEven = [2, 4, 6];
 var mixedBag = [2, 4, 5, 6];
 
-var isEven = function (x) { return x % 2 === 0 };
+
+// console.log('onlyEven array original:', onlyEven)
+// console.log('return value:', onlyEven.unshift(0))
+// console.log('new onlyEven array:', onlyEven)
+// console.log('mixedbag array original:', mixedBag)
+// console.log('return value:', mixedBag.shift())
+// console.log('new mixedbag array:', mixedBag)
+
 
 // console.log(onlyEven.every(isEven))
 // console.log(mixedBag.every(isEven))
 
 // ----------------------------------------------------------
 
+
+let original = [1, 2, 3, 4, 5]
+let filteredEven = original.filter(num => num % 2 === 0)
+let reduced = original.reduce((a, b) => a + b)
+let mappedPlusTwo = original.map(num => num + 2)
+
+console.log(original)
+console.log('filtered:', filteredEven)
+console.log('reduced:', reduced)
+console.log('mapped:', mappedPlusTwo)
+console.log(original)
