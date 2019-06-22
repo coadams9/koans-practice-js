@@ -43,8 +43,8 @@ var battleCry = megalomaniac.battleCry(4);
 // let x = Array(4 + 1)
 // console.log(x)
 
-let test = Array(4).fill('x')
-let x = test.join(' ' + 'blah')
+// let test = Array(4).fill('x')
+// let x = test.join(' ' + 'blah')
 // console.log(x)
 
 // ----------------------------------------------------------
@@ -132,7 +132,7 @@ var products = [
     { name: "Taste Of Athens", ingredients: ["spinach", "kalamata olives", "sesame seeds"], containsNuts: true }
 ];
 
-var i, j, hasMushrooms, productsICanEat = [];
+// var i, j, hasMushrooms, productsICanEat = [];
 
 // for (i = 0; i < products.length; i += 1) {
 //     if (products[i].containsNuts === false) {
@@ -147,8 +147,27 @@ var i, j, hasMushrooms, productsICanEat = [];
 //     }
 // }
 
-let noNuts = products.filter(obj => obj.containsNuts === false)
-let okToEat = noNuts.filter(pizza => !pizza.ingredients.includes('mushrooms'))
-console.log(okToEat[0].name)
+// let noNuts = products.filter(obj => obj.containsNuts === false)
+// let okToEat = noNuts.filter(pizza => !pizza.ingredients.includes('mushrooms'))
+// console.log(okToEat[0].name)
 
 // ----------------------------------------------------------
+
+// var sum = 0;
+// for (var i = 1; i < 1000; i += 1) {
+//     if (i % 3 === 0 || i % 5 === 0) {
+//         sum += i;
+//     }
+// }
+// console.log(sum)
+
+// ----------------------------------------------------------
+
+var ingredientCount = { "{ingredient name}": 0 };
+
+for (i = 0; i < products.length; i += 1) {
+    for (j = 0; j < products[i].ingredients.length; j += 1) {
+        ingredientCount[products[i].ingredients[j]] = (ingredientCount[products[i].ingredients[j]] || 0) + 1;
+    }
+}
+

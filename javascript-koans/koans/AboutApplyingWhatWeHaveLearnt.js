@@ -46,7 +46,7 @@ describe("About Applying What We Have Learnt", function () {
     let okToEat = noNuts.filter(pizza => !pizza.ingredients.includes('mushrooms'))
     console.log(okToEat[0].name)
 
-    expect(productsICanEat.length).toBe(1);
+    expect(productsICanEat.length).toBe(0);
   });
 
   /*********************************************************************************/
@@ -60,14 +60,19 @@ describe("About Applying What We Have Learnt", function () {
       }
     }
 
-    expect(sum).toBe(FILL_ME_IN);
+    expect(sum).toBe(233168);
   });
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
 
-    var sum = FILL_ME_IN;    /* try chaining range() and reduce() */
+    var sum = _.range(1000).reduce(function (a, b) {
+      if (b % 3 === 0 || b % 5 === 0) {
+        return a + b;
+      }
+      return a;
+    });    /* try chaining range() and reduce() */
 
-    expect(233168).toBe(FILL_ME_IN);
+    expect(233168).toBe(sum);
   });
 
   /*********************************************************************************/
